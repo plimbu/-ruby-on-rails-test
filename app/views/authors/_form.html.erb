@@ -1,0 +1,11 @@
+<h1>FORM PRETEND</h1>
+
+<%= form_for @author, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+<h1>firs name</h1>  <%= f.text_area :first_name, size: "60x12"%>
+<h1>last name</h1>  <%= f.text_area :last_name, size: "60x12" %>
+<h1>age</h1>  <%= f.text_area :age, size: "60x12" %>
+
+  <%= f.submit "Create" %>
+<% end %>
+
+<!-- form_tag(search_path, method: "patch") -->

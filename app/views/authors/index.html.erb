@@ -1,0 +1,29 @@
+<h1>THIS IS THE HOMEPAGE</h1>
+
+
+
+
+
+
+  <% @author.each do |user| %>
+
+
+  <p>
+    Author:
+    <%= user.first_name %>
+    <%= user.last_name %></p>
+  <p>
+    Age
+    <%= user.age %></p><br>
+
+    <%= link_to 'Edit', edit_author_path(user) %>
+      <%= link_to 'Show', user %>
+      <%= link_to 'Delete',
+                   author_path(user),
+                               method: :delete,
+                               data: { confirm: 'Are you sure?' } %>
+    <% end %><br>
+
+<br><%= link_to 'New_author', new_author_path %>
+<a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/articles/1">Delete</a>
+<!-- <div class="notice">Delete success</div> -->

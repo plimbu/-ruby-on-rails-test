@@ -1,0 +1,14 @@
+<h1>Books</h1>
+
+
+<% @book.each do |books| %>
+  <h1>
+    <%= books.title %></h1>
+  <p>description: <%= books.description %></p>
+  <p>pages: <%= books.page_number %> </p>
+
+<%end%>
+
+
+
+<br>
